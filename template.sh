@@ -1,16 +1,20 @@
 #!/bin/bash
 
-PROJECT_OLD_NAME=("template", "Template")
-PROJECT_NEW_NAME=("", "")
+PROJECT_OLD_NAME=("template" "Template" "TEMPLATE")
+PROJECT_NEW_NAME=("" "" "")
 
 printf "Project name [snake_case]: "
 read PROJECT_NEW_NAME[0]
 printf "Project name [CamelCase]: "
 read PROJECT_NEW_NAME[1]
+printf "Project name [UPPERCASE]: "
+read PROJECT_NEW_NAME[2]
+
 
 project_sed_name() {
     sed -i "s/${PROJECT_OLD_NAME[0]}/${PROJECT_NEW_NAME[0]}/g" "${1}"
     sed -i "s/${PROJECT_OLD_NAME[1]}/${PROJECT_NEW_NAME[1]}/g" "${1}"
+    sed -i "s/${PROJECT_OLD_NAME[2]}/${PROJECT_NEW_NAME[2]}/g" "${1}"
 }
 
 PROJECT_OLD_ID="com.konstantintutsch.Template"
