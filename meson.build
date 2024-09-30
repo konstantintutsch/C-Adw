@@ -7,15 +7,21 @@ project(
             'c',
         version: '1.0.0',
         license: 'MIT',
-  meson_version: '>= 1.4.1'
+  meson_version: '>= 1.3'
 )
 project_id = 'com.konstantintutsch.Template'
 
-config_h = configuration_data()
+profile = ''
+version_suffix = ''
 
-flags = [
-  '-DHAVE_CONFIG_H'
-]
+if get_option('profile') == 'development'
+  profile = 'devel'
+
+  project_id += '.Devel'
+  version_suffix = '-@0@'.format(profile)
+endif
+
+config_h = configuration_data()
 
    project_prefix = get_option('prefix')
    project_bindir = project_prefix / get_option('bindir')

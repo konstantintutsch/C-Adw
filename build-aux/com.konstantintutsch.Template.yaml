@@ -1,0 +1,26 @@
+id: com.konstantintutsch.Template
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: Template
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+cleanup:
+  - '*.c'
+  - '*.h'
+  - '*.o'
+  - '*.a'
+  - '_build_flatpak/'
+modules:
+  - name: Template
+    buildsystem: meson
+    run-tests: false
+    config-opts:
+      - -Dprofile=default
+    sources:
+      - type: dir
+        path: ../
