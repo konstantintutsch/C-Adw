@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>@project_id@</id>
+    <metadata_license>MIT</metadata_license>
+    <name>Template</name>
+    <summary>A simple template for LibAdwaita C applications</summary>
+    <description>
+        <p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, bluepirnt files, desktop and appstream files, translations and much more!</p>
+    </description>
+    <launchable type="desktop-id">@project_id@.desktop</launchable>
+    <categories>
+        <category>System</category>
+    </categories>
+    <content_rating type="oars-1.1" />
+    <url type="homepage">https://konstantintutsch.com</url>
+    <url type="vcs-browser">https://github.com/konstantintutsch/c-adw-template</url>
+    <url type="bugtracker">https://github.com/konstantintutsch/c-adw-template/issues</url>
+    <url type="translate">https://github.com/konstantintutsch/c-adw-template/tree/main/po</url>
+    <update_contact>mail@konstantintutsch.com</update_contact>
+    <developer id="com.konstantintutsch">
+        <name translate="no">Konstantin Tutsch</name>
+    </developer>
+    <branding>
+        <color type="primary" scheme_preference="light">#5e2028</color>
+        <color type="primary" scheme_preference="dark">#5e2028</color>
+    </branding>
+    <releases>
+        <release version="1.0.0" date="2024-09-30">
+            <description translate="no">
+                <p>A template!</p>
+                <ul>
+                    <li>This is</li>
+                    <li>a list!</li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+</component>

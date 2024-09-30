@@ -10,12 +10,17 @@ finish-args:
   - --socket=fallback-x11
   - --socket=pulseaudio
 cleanup:
-  - '*.c'
-  - '*.h'
-  - '*.o'
-  - '*.a'
-  - '_build_flatpak/'
+  - /include
+  - /share/pkgconfig
+  - "*.la"
+  - "*.a"
 modules:
+  - name: blueprint-compiler
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
+        commit: d7097cad019c032e803d271d3671d0ee933a522b
   - name: Template
     buildsystem: meson
     run-tests: false

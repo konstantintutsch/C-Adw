@@ -1,16 +1,11 @@
-config_h = configuration_data()
+#
+# Build
+#
 
-config_h.set('project_name', project_name)
-config_h.set('project_id', project_id)
-config_h.set('project_version', project_version)
-
-config_h.set('gettext_package', gettext_package)
-config_h.set('localedir', project_localedir)
-
-conf = configure_file(
+config_h = configure_file(
   input: 'config.h.in',
   output: 'config.h',
-  configuration: config_h
+  configuration: conf
 )
 
 src = files(
@@ -19,6 +14,8 @@ src = files(
   'window.c',
   'answer.c'
 )
+
+internal_inc = include_directories('.')
 
 exe = executable(
           project_name,

@@ -5,7 +5,10 @@
 #define PROJECT_ID "@project_id@"
 #define PROJECT_VERSION "@project_version@"
 
-#define GETTEXT_PACKAGE "@gettext_package@"
 #define LOCALEDIR "@localedir@"
+
+#define GETTEXT_PACKAGE "@gettext_package@"
+#define GRESOURCE_FILE "@gresource_file@"
+#define UI_RESOURCE(String) "@ui_resource@/"String
 
 #endif // CONFIG_H

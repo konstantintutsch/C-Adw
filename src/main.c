@@ -23,10 +23,9 @@ int main(int argc, char *argv[])
     textdomain(GETTEXT_PACKAGE);
 
     // GUI
-    g_autoptr(AdwApplication) app = application_new();
-
-    application_initialize(app);
-    int status = g_application_run(G_APPLICATION(app), argc, argv);
+    int status =
+        g_application_run(G_APPLICATION(template_application_new()), argc,
+                          argv);
 
     return status;
 }

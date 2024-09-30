@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.konstantintutsch.Template package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.konstantintutsch.Template\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-30 21:35+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/application.c:36 data/ui/window.blp:17
+#: data/com.konstantintutsch.Template.desktop.in.in:4
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:5
+msgid "Template"
+msgstr ""
+
+#: src/application.c:44
+msgid "translator-credits"
+msgstr ""
+
+#: src/answer.c:15
+msgid "Hello, World!"
+msgstr ""
+
+#: data/ui/window.blp:23
+msgid "Main Menu"
+msgstr ""
+
+#: data/ui/window.blp:34
+msgid "About Template"
+msgstr ""
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
+msgid "A simple template for LibAdwaita C applications"
+msgstr ""
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:8
+msgid ""
+"Start a new project using LibAdwaita and C easily with this template. This "
+"template provides a Meson configuration, a C application, bluepirnt files, "
+"desktop and appstream files, translations and much more!"
+msgstr ""
