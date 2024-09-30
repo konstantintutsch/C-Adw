@@ -9,63 +9,38 @@ project(
         license: 'MIT',
   meson_version: '>= 1.3'
 )
-project_id = 'com.konstantintutsch.Template'
+base_id = 'com.konstantintutsch.Template'
 
 profile = ''
+id_suffix = ''
 version_suffix = ''
 
 if get_option('profile') == 'development'
   profile = 'devel'
 
-  project_id += '.Devel'
-  version_suffix = '-@0@'.format(profile)
+  id_suffix = '.Devel'
+  version_suffix = '-devel'
 endif
 
-config_h = configuration_data()
+project_name = meson.project_name()
+project_id = base_id + id_suffix
+project_version = meson.project_version() + version_suffix
 
-   project_prefix = get_option('prefix')
-   project_bindir = project_prefix / get_option('bindir')
-  project_datadir = project_prefix / get_option('datadir')
+project_prefix = get_option('prefix')
+project_bindir = project_prefix / get_option('bindir')
+project_datadir = project_prefix / get_option('datadir')
 project_localedir = project_prefix / get_option('localedir')
 
-macros = [
-  ['PROJECT_NAME',    meson.project_name()],
-  ['PROJECT_VERSION', meson.project_version()],
-  ['PROJECT_ID',      project_id]
-]
+gnome = import('gnome')
 
-    gtk_dep = dependency('gtk4')
+gtk_dep = dependency('gtk4')
 adwaita_dep = dependency('libadwaita-1', version: '>=1.4')
 
 #
 # Subdirectories
 #
 
-src = []
+internal_inc = include_directories('.')
 
 subdir('po')
 subdir('src')
-
-internal_inc = include_directories('.')
-
-#
-# Build
-#
-
-foreach macro: macros
-  config_h.set_quoted(macro[0], macro[1])
-endforeach
-
-configure_file(
-         output: 'config.h',
-  configuration: config_h
-)
-configure_inc = include_directories('.')
-
-exe = executable(
-  meson.project_name(),
-                   src,
-   include_directories: [internal_inc, configure_inc],
-          dependencies: [gtk_dep, adwaita_dep],
-               install: true
-)
