@@ -32,6 +32,22 @@ project_sed_id() {
     sed -i "s/${PROJECT_OLD_ID}/${PROJECT_NEW_ID}/g" "${1}"
 }
 
+PROJECT_OLD_VCS_URL="https://github.com/konstantintutsch/c-adw-template"
+PROJECT_NEW_VCS_URL=""
+
+printf "Project VCS URL [${PROJECT_OLD_VCS_URL}]: "
+read PROJECT_NEW_VCS_URL
+
+project_sed_vcs_url() {
+    sed -i "s/${PROJECT_OLD_VCS_URL}/${PROJECT_NEW_VCS_URL}/g" "${1}"
+}
+
+project_sed() {
+    project_sed_id "${1}"
+    project_sed_vcs_url "${1}"
+    project_sed_name "${1}"
+}
+
 # Apply updates
 for directory in "build-aux" "data" "po" "src"
 do
@@ -42,15 +58,13 @@ do
 
     for file in $(find ${directory} -type f)
     do
-        project_sed_id "${file}"
-        project_sed_name "${file}"
+        project_sed "${file}"
     done
 done
 # Left-over files
 for file in "Justfile" "meson.build"
 do
-    project_sed_id "${file}"
-    project_sed_name "${file}"
+    project_sed_ "${file}"
 done
 
 # Reset git
