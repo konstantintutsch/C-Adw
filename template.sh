@@ -56,3 +56,16 @@ done
 # Reset git
 rm --recursive --verbose --interactive=never .git
 git init
+
+# Update files
+vim data/${PROJECT_NEW_ID}.desktop.in.in
+vim data/${ProJECt_NEW_ID}.metainfo.xml.in.in
+
+# Reset translations
+rm --verbose --interactive=never po/*.po po/*.pot po/LINGUAS
+touch po/LINGUAS
+
+meson setup build
+cd build
+meson compile ${PROJECT_NEW_ID}-pot
+cd ..
