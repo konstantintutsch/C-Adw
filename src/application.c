@@ -33,21 +33,24 @@ static void template_application_show_about(GSimpleAction *action,
         TEMPLATE_WINDOW(gtk_application_get_active_window
                         (GTK_APPLICATION(app)));
 
-    const char *developers[] =
-        { "Konstantin Tutsch <mail@konstantintutsch.com>", NULL };
-    const char *designers[] =
-        { "Konstantin Tutsch <mail@konstantintutsch.com>", NULL };
+    const char *developers[] = { "Konstantin Tutsch", NULL };
+    const char *designers[] = { "Konstantin Tutsch", NULL };
 
     adw_show_about_dialog(GTK_WIDGET(window),
                           "application-name", _("Template"),
                           "application-icon", PROJECT_ID,
+                          "developer-name", developers[0],
                           "version", PROJECT_VERSION,
                           "copyright", "© 2024 Konstantin Tutsch",
                           "issue-url",
                           "https://github.com/konstantintutsch/c-adw-template/issues",
                           "license-type", GTK_LICENSE_MIT_X11, "developers",
-                          developers, "designers", designers,
-                          "translator-credits", _("translator-credits"), NULL);
+                          developers, "comments",
+                          _("A simple template for LibAdwaita C applications"),
+                          "website",
+                          "https://github.com/konstantintutsch/c-adw-template",
+                          "designers", designers, "translator-credits",
+                          _("translator-credits"), NULL);
 }
 
 /**
