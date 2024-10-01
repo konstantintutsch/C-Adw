@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
     <id>@project_id@</id>
-    <metadata_license>MIT</metadata_license>
+    <metadata_license>CC-BY-SA-4.0</metadata_license>
+    <project_license>MIT</project_license>
     <name>Template</name>
     <summary>A simple template for LibAdwaita C applications</summary>
     <description>
