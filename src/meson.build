@@ -17,7 +17,7 @@ src = files(
 internal_inc = include_directories('.')
 
 exe = executable(
-          project_name,
+          project_exec,
                    src,
    include_directories: [internal_inc],
           dependencies: [gtk_dep, adwaita_dep],

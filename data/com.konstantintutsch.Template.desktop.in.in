@@ -1,7 +1,9 @@
 [Desktop Entry]
 Type=Application
 Name=Template
+Comment=A simple template for LibAdwaita C applications
 Icon=@project_id@
 StartupNotify=true
 Exec=@project_exec@
+Terminal=false
 Categories=System

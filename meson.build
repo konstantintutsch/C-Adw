@@ -28,7 +28,7 @@ project_name = meson.project_name()
 project_id = base_id + id_suffix
 project_root = '/' + project_id.replace('.', '/')
 project_version = meson.project_version() + version_suffix
-project_exec = '/usr/bin/flatpak run ' + project_id
+project_exec = project_id
 
 conf.set('project_name', project_name)
 conf.set('project_id', project_id)

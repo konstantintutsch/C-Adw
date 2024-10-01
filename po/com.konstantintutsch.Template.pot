@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.konstantintutsch.Template\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-30 21:35+0200\n"
+"POT-Creation-Date: 2024-10-01 11:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/application.c:36 data/ui/window.blp:17
+#: src/application.c:40 data/ui/window.blp:17
 #: data/com.konstantintutsch.Template.desktop.in.in:4
 #: data/com.konstantintutsch.Template.metainfo.xml.in.in:5
 msgid "Template"
 msgstr ""
 
-#: src/application.c:44
-msgid "translator-credits"
+#: src/application.c:49 data/com.konstantintutsch.Template.desktop.in.in:5
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
+msgid "A simple template for LibAdwaita C applications"
 msgstr ""
 
-#: src/answer.c:15
-msgid "Hello, World!"
+#: src/application.c:53
+msgid "translator-credits"
 msgstr ""
 
 #: data/ui/window.blp:23
@@ -39,13 +40,9 @@ msgstr ""
 msgid "About Template"
 msgstr ""
 
-#: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
-msgid "A simple template for LibAdwaita C applications"
-msgstr ""
-
 #: data/com.konstantintutsch.Template.metainfo.xml.in.in:8
 msgid ""
 "Start a new project using LibAdwaita and C easily with this template. This "
-"template provides a Meson configuration, a C application, bluepirnt files, "
+"template provides a Meson configuration, a C application, blueprint files, "
 "desktop and appstream files, translations and much more!"
 msgstr ""

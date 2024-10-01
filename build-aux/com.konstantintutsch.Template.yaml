@@ -2,7 +2,7 @@ id: com.konstantintutsch.Template
 runtime: org.gnome.Platform
 runtime-version: '46'
 sdk: org.gnome.Sdk
-command: Template
+command: com.konstantintutsch.Template
 finish-args:
   - --device=dri
   - --share=ipc
