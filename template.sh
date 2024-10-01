@@ -15,6 +15,11 @@ project_sed_name() {
     sed -i "s/${PROJECT_OLD_NAME[0]}/${PROJECT_NEW_NAME[0]}/g" "${1}"
     sed -i "s/${PROJECT_OLD_NAME[1]}/${PROJECT_NEW_NAME[1]}/g" "${1}"
     sed -i "s/${PROJECT_OLD_NAME[2]}/${PROJECT_NEW_NAME[2]}/g" "${1}"
+    
+    # Fix symbols
+    sed -i "s/${PROJECT_NEW_NAME[0]} \\$/template \\$/g" "${1}" # template keyword in Blueprints
+    sed -i "s/gtk_widget_init_${PROJECT_NEW_NAME[0]}/gtk_widget_init_template/g" "${1}" # GTK function
+    sed -i "s/gtk_widget_class_set_${PROJECT_NEW_NAME[0]}_from_resource/gtk_widget_class_set_template_from_resource/g" "${1}" # GTK function
 }
 
 PROJECT_OLD_ID="com.konstantintutsch.Template"
