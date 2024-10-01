@@ -1,7 +1,6 @@
 src/main.c
 src/application.c
 src/window.c
-src/answer.c
 data/ui/window.blp
 data/com.konstantintutsch.Template.desktop.in.in
 data/com.konstantintutsch.Template.metainfo.xml.in.in

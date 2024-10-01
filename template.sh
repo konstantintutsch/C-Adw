@@ -38,6 +38,9 @@ PROJECT_NEW_VCS_URL=""
 printf "Project VCS URL [${PROJECT_OLD_VCS_URL}]: "
 read PROJECT_NEW_VCS_URL
 
+PROJECT_OLD_VCS_URL="${PROJECT_OLD_VCS_URL//\//\\\/}"
+PROJECT_NEW_VCS_URL="${PROJECT_NEW_VCS_URL//\//\\\/}"
+
 project_sed_vcs_url() {
     sed -i "s/${PROJECT_OLD_VCS_URL}/${PROJECT_NEW_VCS_URL}/g" "${1}"
 }
@@ -64,7 +67,7 @@ done
 # Left-over files
 for file in "Justfile" "meson.build"
 do
-    project_sed_ "${file}"
+    project_sed "${file}"
 done
 
 # Reset git
