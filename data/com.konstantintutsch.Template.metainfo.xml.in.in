@@ -5,7 +5,7 @@
     <name>Template</name>
     <summary>A simple template for LibAdwaita C applications</summary>
     <description>
-        <p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, bluepirnt files, desktop and appstream files, translations and much more!</p>
+        <p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, blueprint files, desktop and appstream files, translations and much more!</p>
     </description>
     <launchable type="desktop-id">@project_id@.desktop</launchable>
     <categories>
