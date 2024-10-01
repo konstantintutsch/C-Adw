@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# Name
+#
+
 PROJECT_OLD_NAME=("template" "Template" "TEMPLATE")
 PROJECT_NEW_NAME=("" "" "")
 
@@ -9,7 +13,6 @@ printf "Project name [CamelCase]: "
 read PROJECT_NEW_NAME[1]
 printf "Project name [UPPERCASE]: "
 read PROJECT_NEW_NAME[2]
-
 
 project_sed_name() {
     sed -i "s/${PROJECT_OLD_NAME[0]}/${PROJECT_NEW_NAME[0]}/g" "${1}"
@@ -22,6 +25,31 @@ project_sed_name() {
     sed -i "s/gtk_widget_class_set_${PROJECT_NEW_NAME[0]}_from_resource/gtk_widget_class_set_template_from_resource/g" "${1}" # GTK function
 }
 
+#
+# Description
+#
+
+PROJECT_OLD_DESCRIPTION=("A simple template for LibAdwaita C applications" "<p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, blueprint files, desktop and appstream files, translations and much more!</p>")
+PROJECT_NEW_DESCRIPTION=("" "" "")
+
+printf "Project description [short]: "
+read PROJECT_NEW_DESCRIPTION[0]
+printf "Project description [long]: "
+read PROJECT_NEW_DESCRIPTION[1]
+
+# Long description contains tags
+PROJECT_OLD_DESCRIPTION[1]="${PROJECT_OLD_DESCRIPTION[1]//\//\\\/}"
+PROJECT_NEW_DESCRIPTION[1]="${PROJECT_NEW_DESCRIPTION[1]//\//\\\/}"
+
+project_sed_description() {
+    sed -i "s/${PROJECT_OLD_DESCRIPTION[0]}/${PROJECT_NEW_DESCRIPTION[0]}/g" "${1}"
+    sed -i "s/${PROJECT_OLD_DESCRIPTION[1]}/${PROJECT_NEW_DESCRIPTION[1]}/g" "${1}"
+}
+
+#
+# ID
+#
+ 
 PROJECT_OLD_ID="com.konstantintutsch.Template"
 PROJECT_NEW_ID=""
 
@@ -31,6 +59,10 @@ read PROJECT_NEW_ID
 project_sed_id() {
     sed -i "s/${PROJECT_OLD_ID}/${PROJECT_NEW_ID}/g" "${1}"
 }
+
+#
+# VCS URL
+#
 
 PROJECT_OLD_VCS_URL="https://github.com/konstantintutsch/c-adw-template"
 PROJECT_NEW_VCS_URL=""
@@ -45,9 +77,14 @@ project_sed_vcs_url() {
     sed -i "s/${PROJECT_OLD_VCS_URL}/${PROJECT_NEW_VCS_URL}/g" "${1}"
 }
 
+#
+# Meta
+#
+
 project_sed() {
     project_sed_id "${1}"
     project_sed_vcs_url "${1}"
+    project_sed_description "${1}"
     project_sed_name "${1}"
 }
 
@@ -75,8 +112,10 @@ rm --recursive --verbose --interactive=never .git
 git init
 
 # Update files
-vim data/${PROJECT_NEW_ID}.desktop.in.in
-vim data/${PROJECT_NEW_ID}.metainfo.xml.in.in
+for file in "data/${PROJECT_NEW_ID}.desktop.in.in" "data/${PROJECT_NEW_ID}.metainfo.xml.in.in" "src/application.c"
+do
+    vim "${file}"
+done
 
 # Reset translations
 rm --verbose --interactive=never po/*.po po/*.pot po/LINGUAS
