@@ -59,7 +59,7 @@ git init
 
 # Update files
 vim data/${PROJECT_NEW_ID}.desktop.in.in
-vim data/${ProJECt_NEW_ID}.metainfo.xml.in.in
+vim data/${ProJECT_NEW_ID}.metainfo.xml.in.in
 
 # Reset translations
 rm --verbose --interactive=never po/*.po po/*.pot po/LINGUAS

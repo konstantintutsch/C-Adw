@@ -6,7 +6,6 @@
 #include <locale.h>
 
 #include "application.h"
-#include "answer.h"
 #include "config.h"
 
 /**
