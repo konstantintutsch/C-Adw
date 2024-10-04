@@ -64,7 +64,7 @@ project_sed_id() {
 # VCS URL
 #
 
-PROJECT_OLD_VCS_URL=("https://github.com/konstantintutsch/c-adw-template" "https://raw.githubusercontent.com/konstantintutsch/c-adw-template")
+PROJECT_OLD_VCS_URL=("https://github.com/konstantintutsch/c-adw-template" "https://github.com/konstantintutsch/c-adw-template")
 PROJECT_NEW_VCS_URL=("" "")
 
 printf "Project VCS URL [${PROJECT_OLD_VCS_URL[0]}]: "
