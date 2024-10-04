@@ -11,11 +11,12 @@
 /**
  * This class handles all window logic.
  */
-typedef struct _TemplateWindow {
+struct _TemplateWindow {
     AdwApplicationWindow parent;
-} TemplateWindow;
+};
 
 G_DEFINE_TYPE(TemplateWindow, template_window, ADW_TYPE_APPLICATION_WINDOW)
+
 /**
  * This function initializes a TemplateWindow object.
  *
@@ -44,7 +45,7 @@ static void template_window_class_init(TemplateWindowClass *class)
  *
  * @return TemplateWindow
  */
-TemplateWindow *template_window_new(TemplateWindow *app)
+TemplateWindow *template_window_new(TemplateApplication *app)
 {
     return g_object_new(TEMPLATE_TYPE_WINDOW, "application", app, NULL);
 }

@@ -80,7 +80,7 @@ static void template_application_activate(GApplication *app)
 {
     TemplateWindow *window;
 
-    window = template_window_new(TEMPLATE_WINDOW(app));
+    window = template_window_new(TEMPLATE_APPLICATION(app));
     gtk_window_present(GTK_WINDOW(window));
 }
 
@@ -100,7 +100,7 @@ static void template_application_open(GApplication *app, GFile **files,
 
     windows = gtk_application_get_windows(GTK_APPLICATION(app));
     if (!windows)
-        window = template_window_new(TEMPLATE_WINDOW(app));
+        window = template_window_new(TEMPLATE_APPLICATION(app));
     window = TEMPLATE_WINDOW(windows->data);
 
     for (int i = 0; i < n_files; i++)
