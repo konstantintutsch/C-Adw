@@ -25,6 +25,11 @@
         <color type="primary" scheme_preference="light">#5e2028</color>
         <color type="primary" scheme_preference="dark">#5e2028</color>
     </branding>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/konstantintutsch/c-adw-template/main/data/com.konstantintutsch.Template.Screenshot-1.png</image>
+        </screenshot>
+    </screenshots>
     <releases>
         <release version="1.0.0" date="2024-09-30">
             <description translate="no">

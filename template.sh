@@ -64,17 +64,22 @@ project_sed_id() {
 # VCS URL
 #
 
-PROJECT_OLD_VCS_URL="https://github.com/konstantintutsch/c-adw-template"
-PROJECT_NEW_VCS_URL=""
+PROJECT_OLD_VCS_URL=("https://github.com/konstantintutsch/c-adw-template" "https://raw.githubusercontent.com/konstantintutsch/c-adw-template")
+PROJECT_NEW_VCS_URL=("" "")
 
-printf "Project VCS URL [${PROJECT_OLD_VCS_URL}]: "
-read PROJECT_NEW_VCS_URL
+printf "Project VCS URL [${PROJECT_OLD_VCS_URL[0]}]: "
+read PROJECT_NEW_VCS_URL[0]
+printf "Project RAW VCS URL [${PROJECT_OLD_VCS_URL[1]}]: "
+read PROJECT_NEW_VCS_URL[1]
 
-PROJECT_OLD_VCS_URL="${PROJECT_OLD_VCS_URL//\//\\\/}"
-PROJECT_NEW_VCS_URL="${PROJECT_NEW_VCS_URL//\//\\\/}"
+PROJECT_OLD_VCS_URL[0]="${PROJECT_OLD_VCS_URL[0]//\//\\\/}"
+PROJECT_NEW_VCS_URL[0]="${PROJECT_NEW_VCS_URL[0]//\//\\\/}"
+PROJECT_OLD_VCS_URL[1]="${PROJECT_OLD_VCS_URL[1]//\//\\\/}"
+PROJECT_NEW_VCS_URL[1]="${PROJECT_NEW_VCS_URL[1]//\//\\\/}"
 
 project_sed_vcs_url() {
-    sed -i "s/${PROJECT_OLD_VCS_URL}/${PROJECT_NEW_VCS_URL}/g" "${1}"
+    sed -i "s/${PROJECT_OLD_VCS_URL[0]}/${PROJECT_NEW_VCS_URL[0]}/g" "${1}"
+    sed -i "s/${PROJECT_OLD_VCS_URL[1]}/${PROJECT_NEW_VCS_URL[1]}/g" "${1}"
 }
 
 #
