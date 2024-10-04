@@ -102,7 +102,7 @@ do
     done
 done
 # Left-over files
-for file in "Justfile" "meson.build"
+for file in "Justfile" "meson.build" "README.md"
 do
     project_sed "${file}"
 done
