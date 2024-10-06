@@ -9,7 +9,6 @@
 
 G_DECLARE_FINAL_TYPE(TemplateWindow, template_window, TEMPLATE, WINDOW,
                      AdwApplicationWindow)
-
 TemplateWindow *template_window_new(TemplateApplication *app);
 void template_window_open(TemplateWindow *window, GFile *file);
 

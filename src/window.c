@@ -16,7 +16,6 @@ struct _TemplateWindow {
 };
 
 G_DEFINE_TYPE(TemplateWindow, template_window, ADW_TYPE_APPLICATION_WINDOW)
-
 /**
  * This function initializes a TemplateWindow object.
  *

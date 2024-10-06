@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: template\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-01 11:05+0200\n"
-"PO-Revision-Date: 2024-10-01 11:05+0200\n"
+"POT-Creation-Date: 2024-10-06 14:29+0200\n"
+"PO-Revision-Date: 2024-10-06 14:30+0200\n"
 "Last-Translator: Konstantin Tutsch <mail@konstantintutsch.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -16,22 +16,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 46.1\n"
+"X-Generator: Gtranslator 47.0\n"
 
-#: src/application.c:40 data/ui/window.blp:17
-#: data/com.konstantintutsch.Template.desktop.in.in:4
-#: data/com.konstantintutsch.Template.metainfo.xml.in.in:5
-msgid "Template"
-msgstr "Vorlage"
-
-#: src/application.c:49 data/com.konstantintutsch.Template.desktop.in.in:5
-#: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
+#: src/application.c:44 data/com.konstantintutsch.Template.desktop.in.in:5
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:7
 msgid "A simple template for LibAdwaita C applications"
 msgstr "Eine simple Vorlage für LibAdwaita C Anwendungen"
 
-#: src/application.c:53
+#: src/application.c:55
 msgid "translator-credits"
 msgstr "Konstantin Tutsch <mail@konstantintutsch.com>"
+
+#: src/application.c:58
+msgid "Dependencies"
+msgstr "Abhängigkeiten"
+
+#: data/ui/window.blp:17 data/com.konstantintutsch.Template.desktop.in.in:4
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
+msgid "Template"
+msgstr "Vorlage"
 
 #: data/ui/window.blp:23
 msgid "Main Menu"
@@ -41,7 +44,7 @@ msgstr "Hauptmenü"
 msgid "About Template"
 msgstr "Über Vorlage"
 
-#: data/com.konstantintutsch.Template.metainfo.xml.in.in:8
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
 msgid ""
 "Start a new project using LibAdwaita and C easily with this template. This "
 "template provides a Meson configuration, a C application, blueprint files, "
