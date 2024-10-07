@@ -1,4 +1,4 @@
-# Template
+# Template <img align="right" alt="Build Status" src="https://github.com/konstantintutsch/c-adw-template/actions/workflows/build.yaml/badge.svg">
 
 <img align="right" alt="Template Icon" src="data/icons/com.konstantintutsch.Template.svg">
 
