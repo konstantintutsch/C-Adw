@@ -7,7 +7,7 @@
 #include "config.h"
 
 /**
- * An object of this class handles the functionality of an application.
+ * This structure handles data of an application.
  */
 struct _TemplateApplication {
     AdwApplication parent;
@@ -20,7 +20,7 @@ static void template_application_show_about(GSimpleAction * self,
                                             TemplateApplication * app);
 
 /**
- * This function initializes a TemplateApplication object.
+ * This function initializes a TemplateApplication.
  *
  * @param app Application to be initialized
  */
@@ -38,7 +38,7 @@ static void template_application_init(TemplateApplication *app)
 }
 
 /**
- * This function activates a application object.
+ * This function activates a TemplateApplication.
  *
  * @param app Application to be activated
  */
@@ -51,7 +51,7 @@ static void template_application_activate(GApplication *app)
 }
 
 /**
- * This function opens a new application object.
+ * This function opens a new TemplateApplication.
  *
  * @param self https://docs.gtk.org/gio/signal.Application.open.html
  * @param files https://docs.gtk.org/gio/signal.Application.open.html
@@ -84,7 +84,7 @@ static void template_application_class_init(TemplateApplicationClass *class)
 }
 
 /**
- * This function creates a new TemplateApplication object.
+ * This function creates a new TemplateApplication.
  *
  * @return TemplateApplication
  */
@@ -120,8 +120,7 @@ static void template_application_show_about(GSimpleAction *self,
 
     // Details
     adw_about_dialog_set_comments(about,
-                                  _
-                                  ("A simple template for LibAdwaita C applications"));
+                                  _("Create GUI apps in C using LibAdwaita"));
 
     // Credits
     const char *developers[] =

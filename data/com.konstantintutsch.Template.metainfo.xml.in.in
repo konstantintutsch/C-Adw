@@ -4,19 +4,19 @@
     <metadata_license>CC-BY-SA-4.0</metadata_license>
     <project_license>MIT</project_license>
     <name>Template</name>
-    <summary>A simple template for LibAdwaita C applications</summary>
+    <summary>Create GUI apps in C using LibAdwaita</summary>
     <description>
-        <p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, blueprint files, desktop and appstream files, translations and much more!</p>
+        <p>This repository is a template for creating your own GUI application in C using LibAdwaita.</p><p>Already configured are:</p><ul><li>Boilder-plate code</li><li>Build system</li><li>Flatpak builds</li><li>CI/CD</li><li>And much more …</li></ul>
     </description>
     <launchable type="desktop-id">@project_id@.desktop</launchable>
     <categories>
         <category>System</category>
     </categories>
     <content_rating type="oars-1.1" />
-    <url type="homepage">https://github.com/konstantintutsch/c-adw-template</url>
-    <url type="vcs-browser">https://github.com/konstantintutsch/c-adw-template</url>
-    <url type="bugtracker">https://github.com/konstantintutsch/c-adw-template/issues</url>
-    <url type="translate">https://github.com/konstantintutsch/c-adw-template/tree/main/po</url>
+    <url type="homepage">https://github.com/konstantintutsch/C-Adw</url>
+    <url type="vcs-browser">https://github.com/konstantintutsch/C-Adw</url>
+    <url type="bugtracker">https://github.com/konstantintutsch/C-Adw/issues</url>
+    <url type="translate">https://github.com/konstantintutsch/C-Adw/tree/main/po</url>
     <update_contact>mail@konstantintutsch.com</update_contact>
     <developer id="com.konstantintutsch">
         <name translate="no">Konstantin Tutsch</name>
@@ -27,11 +27,11 @@
     </branding>
     <screenshots>
         <screenshot type="default">
-            <image>https://github.com/konstantintutsch/c-adw-template/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Light.png</image>
+            <image>https://github.com/konstantintutsch/C-Adw/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Light.png</image>
             <caption>Light Appearance</caption>
         </screenshot>
         <screenshot>
-            <image>https://github.com/konstantintutsch/c-adw-template/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Dark.png</image>
+            <image>https://github.com/konstantintutsch/C-Adw/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Dark.png</image>
             <caption>Dark Appearance</caption>
         </screenshot>
     </screenshots>

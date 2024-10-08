@@ -7,7 +7,7 @@
 #include "config.h"
 
 /**
- * This class handles all window logic.
+ * This structure handles data of a window.
  */
 struct _TemplateWindow {
     AdwApplicationWindow parent;
@@ -16,7 +16,7 @@ struct _TemplateWindow {
 G_DEFINE_TYPE(TemplateWindow, template_window, ADW_TYPE_APPLICATION_WINDOW);
 
 /**
- * This function initializes a TemplateWindow object.
+ * This function initializes a TemplateWindow.
  *
  * @param window Window to be initialized
  */
@@ -26,7 +26,7 @@ static void template_window_init(TemplateWindow *window)
 }
 
 /**
- * This function initializes the TemplateWindow class.
+ * This function initializes a TemplateWindow class.
  *
  * @param class Window class to be initialized
  */
@@ -37,7 +37,7 @@ static void template_window_class_init(TemplateWindowClass *class)
 }
 
 /**
- * This function creates a new TemplateWindow object.
+ * This function creates a new TemplateWindow.
  *
  * @param app Application to create the new window for
  *
@@ -49,7 +49,7 @@ TemplateWindow *template_window_new(TemplateApplication *app)
 }
 
 /**
- * This function opens a TemplateWindow window.
+ * This function opens a TemplateWindow.
  *
  * @param window Window to be opened
  * @param file File to be processed with the window

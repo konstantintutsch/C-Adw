@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: template\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-06 14:29+0200\n"
-"PO-Revision-Date: 2024-10-06 14:30+0200\n"
+"POT-Creation-Date: 2024-10-08 21:16+0200\n"
+"PO-Revision-Date: 2024-10-08 21:19+0200\n"
 "Last-Translator: Konstantin Tutsch <mail@konstantintutsch.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 47.0\n"
 
-#: src/application.c:44 data/com.konstantintutsch.Template.desktop.in.in:5
+#: src/application.c:123 data/com.konstantintutsch.Template.desktop.in.in:5
 #: data/com.konstantintutsch.Template.metainfo.xml.in.in:7
-msgid "A simple template for LibAdwaita C applications"
-msgstr "Eine simple Vorlage für LibAdwaita C Anwendungen"
+msgid "Create GUI apps in C using LibAdwaita"
+msgstr "Erstellen Sie GUI Apps in C mit Hilfe von LibAdwaita"
 
-#: src/application.c:55
+#: src/application.c:134
 msgid "translator-credits"
 msgstr "Konstantin Tutsch <mail@konstantintutsch.com>"
 
-#: src/application.c:58
+#: src/application.c:137
 msgid "Dependencies"
 msgstr "Abhängigkeiten"
 
@@ -46,14 +46,53 @@ msgstr "Über Vorlage"
 
 #: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
 msgid ""
-"Start a new project using LibAdwaita and C easily with this template. This "
-"template provides a Meson configuration, a C application, blueprint files, "
-"desktop and appstream files, translations and much more!"
+"This repository is a template for creating your own GUI application in C "
+"using LibAdwaita."
 msgstr ""
-"Beginne ein neues Projekt, welche LibAdwaita und C nutzt, ganz einfach mit "
-"dieser Vorlage. Diese Vorlage stellt eine Meson Konfiguration, eine C "
-"Anwendung, Blueprint Dateien, Desktop und Appstream Dateien, Übersetzungen "
-"und vieles Mehr zu Verfügung!"
+"Dieses Repository ist eine Vorlage für das Erstellen von Ihrer eigenen GUI "
+"Anwendung in C mit der Hilfe von LibAdwaita."
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "Already configured are:"
+msgstr "Bereits konfiguriert sind:"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "Boilder-plate code"
+msgstr "Basiscode"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "Build system"
+msgstr "Build System"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "Flatpak builds"
+msgstr "Flatpak Builds"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "CI/CD"
+msgstr "CI/CD"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:9
+msgid "And much more …"
+msgstr "Und vieles mehr …"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:31
+msgid "Light Appearance"
+msgstr "Helles Erscheinungsbild"
+
+#: data/com.konstantintutsch.Template.metainfo.xml.in.in:35
+msgid "Dark Appearance"
+msgstr "Dunkles Erscheinungsbild"
+
+#~ msgid ""
+#~ "Start a new project using LibAdwaita and C easily with this template. "
+#~ "This template provides a Meson configuration, a C application, blueprint "
+#~ "files, desktop and appstream files, translations and much more!"
+#~ msgstr ""
+#~ "Beginne ein neues Projekt, welche LibAdwaita und C nutzt, ganz einfach "
+#~ "mit dieser Vorlage. Diese Vorlage stellt eine Meson Konfiguration, eine C "
+#~ "Anwendung, Blueprint Dateien, Desktop und Appstream Dateien, "
+#~ "Übersetzungen und vieles Mehr zu Verfügung!"
 
 #~ msgid "Hello, World!"
 #~ msgstr "Hallo, Welt!"

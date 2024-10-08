@@ -29,8 +29,8 @@ project_sed_name() {
 # Description
 #
 
-PROJECT_OLD_DESCRIPTION=("A simple template for LibAdwaita C applications" "<p>Start a new project using LibAdwaita and C easily with this template. This template provides a Meson configuration, a C application, blueprint files, desktop and appstream files, translations and much more!</p>")
-PROJECT_NEW_DESCRIPTION=("" "" "")
+PROJECT_OLD_DESCRIPTION=("Create GUI apps in C using LibAdwaita" "<p>This repository is a template for creating your own GUI application in C using LibAdwaita.</p><p>Already configured are:</p><ul><li>Boilder-plate code</li><li>Build system</li><li>Flatpak builds</li><li>CI/CD</li><li>And much more …</li></ul>")
+PROJECT_NEW_DESCRIPTION=("" "")
 
 printf "Project description [short]: "
 read PROJECT_NEW_DESCRIPTION[0]
@@ -64,7 +64,7 @@ project_sed_id() {
 # VCS URL
 #
 
-PROJECT_OLD_VCS_URL=("https://github.com/konstantintutsch/c-adw-template" "https://github.com/konstantintutsch/c-adw-template")
+PROJECT_OLD_VCS_URL=("https://github.com/konstantintutsch/C-Adw" "https://github.com/konstantintutsch/C-Adw")
 PROJECT_NEW_VCS_URL=("" "")
 
 printf "Project VCS URL [${PROJECT_OLD_VCS_URL[0]}]: "
