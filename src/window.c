@@ -1,10 +1,8 @@
 #include "window.h"
 
 #include <adwaita.h>
-
 #include <glib/gi18n.h>
 #include <locale.h>
-
 #include "application.h"
 #include "config.h"
 
@@ -15,11 +13,12 @@ struct _TemplateWindow {
     AdwApplicationWindow parent;
 };
 
-G_DEFINE_TYPE(TemplateWindow, template_window, ADW_TYPE_APPLICATION_WINDOW)
+G_DEFINE_TYPE(TemplateWindow, template_window, ADW_TYPE_APPLICATION_WINDOW);
+
 /**
  * This function initializes a TemplateWindow object.
  *
- * @param window TemplateWindow to be initialized
+ * @param window Window to be initialized
  */
 static void template_window_init(TemplateWindow *window)
 {
@@ -29,7 +28,7 @@ static void template_window_init(TemplateWindow *window)
 /**
  * This function initializes the TemplateWindow class.
  *
- * @param class TemplateWindowClass to be initialized
+ * @param class Window class to be initialized
  */
 static void template_window_class_init(TemplateWindowClass *class)
 {
@@ -40,7 +39,7 @@ static void template_window_class_init(TemplateWindowClass *class)
 /**
  * This function creates a new TemplateWindow object.
  *
- * @param app TemplateApplication to create the new TemplateWindow for
+ * @param app Application to create the new window for
  *
  * @return TemplateWindow
  */
