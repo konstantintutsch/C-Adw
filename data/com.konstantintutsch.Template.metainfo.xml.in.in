@@ -27,7 +27,12 @@
     </branding>
     <screenshots>
         <screenshot type="default">
-            <image>https://github.com/konstantintutsch/c-adw-template/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot-1.png</image>
+            <image>https://github.com/konstantintutsch/c-adw-template/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Light.png</image>
+            <caption>Light Appearance</caption>
+        </screenshot>
+        <screenshot>
+            <image>https://github.com/konstantintutsch/c-adw-template/raw/refs/heads/main/data/com.konstantintutsch.Template.Screenshot.Dark.png</image>
+            <caption>Dark Appearance</caption>
         </screenshot>
     </screenshots>
     <releases>

@@ -112,6 +112,16 @@ do
     project_sed "${file}"
 done
 
+README_INSTRUCTIONS="
+To configure this template, run:
+
+```xml
+./template.sh
+```
+"
+README_INSTRUCTIONS="${README_INSTRUCTIONS//\//\\\/}"
+sed -i "s/${README_INSTRUCTIONS}//g" "README.md"
+
 # Reset git
 rm --recursive --verbose --interactive=never .git
 git init
