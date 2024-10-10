@@ -112,15 +112,9 @@ do
     project_sed "${file}"
 done
 
-README_INSTRUCTIONS="
-To configure this ${PROJECT_NEW_NAME[0]}, run:
-
-\`\`\`xml
-./${PROJECT_NEW_NAME[0]}.sh
-\`\`\`
-"
+README_INSTRUCTIONS="To configure this ${PROJECT_NEW_NAME[0]}, run:\\n\\n\`\`\`xml\\n./${PROJECT_NEW_NAME[0]}.sh\\n\`\`\`\\n\\n"
 README_INSTRUCTIONS="${README_INSTRUCTIONS//\//\\\/}"
-sed -i "s/${README_INSTRUCTIONS}//g" "README.md"
+sed -z "s/${README_INSTRUCTIONS}//g" "README.md"
 
 # Reset git
 rm --recursive --verbose --interactive=never .git
