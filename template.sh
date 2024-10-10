@@ -111,10 +111,8 @@ for file in "Justfile" "meson.build" "README.md"
 do
     project_sed "${file}"
 done
-
-README_INSTRUCTIONS="To configure this ${PROJECT_NEW_NAME[0]}, run:\\n\\n\`\`\`xml\\n./${PROJECT_NEW_NAME[0]}.sh\\n\`\`\`\\n\\n"
-README_INSTRUCTIONS="${README_INSTRUCTIONS//\//\\\/}"
-sed -z "s/${README_INSTRUCTIONS}//g" "README.md"
+# Template instructions
+sed -i -z "s/To configure this ${PROJECT_NEW_NAME[0]}, run:\n\n\`\`\`xml\n.\/${PROJECT_NEW_NAME[0]}.sh\n\`\`\`\n\n//g" "README.md"
 
 # Reset git
 rm --recursive --verbose --interactive=never .git
