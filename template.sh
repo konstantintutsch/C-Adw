@@ -113,11 +113,11 @@ do
 done
 
 README_INSTRUCTIONS="
-To configure this template, run:
+To configure this ${PROJECT_NEW_NAME[0]}, run:
 
-```xml
-./template.sh
-```
+\`\`\`xml
+./${PROJECT_NEW_NAME[0]}.sh
+\`\`\`
 "
 README_INSTRUCTIONS="${README_INSTRUCTIONS//\//\\\/}"
 sed -i "s/${README_INSTRUCTIONS}//g" "README.md"
@@ -140,3 +140,6 @@ meson setup build
 cd build
 meson compile ${PROJECT_NEW_ID}-pot
 cd ..
+
+# Remove self
+rm --verbose --interactive=never template.sh
