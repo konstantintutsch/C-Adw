@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.konstantintutsch.Template\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-08 21:16+0200\n"
+"POT-Creation-Date: 2024-10-13 11:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,16 +30,17 @@ msgstr ""
 msgid "Dependencies"
 msgstr ""
 
-#: data/ui/window.blp:17 data/com.konstantintutsch.Template.desktop.in.in:4
+#: data/ui/window.blp:9 data/ui/window.blp:20
+#: data/com.konstantintutsch.Template.desktop.in.in:4
 #: data/com.konstantintutsch.Template.metainfo.xml.in.in:6
 msgid "Template"
 msgstr ""
 
-#: data/ui/window.blp:23
+#: data/ui/window.blp:26
 msgid "Main Menu"
 msgstr ""
 
-#: data/ui/window.blp:34
+#: data/ui/window.blp:37
 msgid "About Template"
 msgstr ""
 
