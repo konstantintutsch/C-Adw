@@ -5,6 +5,10 @@ default:
 format:
     indent src/*.c src/*.h -linux -nut -i4
 
+translate:
+    meson compile -C ./build com.konstantintutsch.Template-pot
+    meson compile -C ./build com.konstantintutsch.Template-update-po
+
 release:
     flatpak-builder --user --install --force-clean build/release build-aux/com.konstantintutsch.Template.yaml 
 
