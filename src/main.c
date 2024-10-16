@@ -21,9 +21,10 @@ int main(int argc, char *argv[])
     textdomain(GETTEXT_PACKAGE);
 
     // GUI
-    int status =
-        g_application_run(G_APPLICATION(template_application_new()), argc,
-                          argv);
+    TemplateApplication *application = template_application_new();
+    int status = g_application_run(G_APPLICATION(application), argc,
+                                   argv);
 
+    g_object_unref(application);
     return status;
 }
