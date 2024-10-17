@@ -20,6 +20,6 @@ exe = executable(
           project_exec,
                    src,
    include_directories: [internal_inc],
-          dependencies: [gtk_dep, adwaita_dep],
+          dependencies: [adwaita_dep, gtk_dep, gdk_dep, glib_dep, gio_dep],
                install: true
 )
