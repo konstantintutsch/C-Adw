@@ -61,6 +61,23 @@ project_sed_id() {
 }
 
 #
+# Website
+#
+ 
+PROJECT_OLD_WEBSITE="https://konstantintutsch.com/C-Adw"
+PROJECT_NEW_WEBSITE=""
+
+printf "Project Website [${PROJECT_OLD_WEBSITE}]: "
+read PROJECT_NEW_WEBSITE
+
+PROJECT_OLD_WEBSITE="${PROJECT_OLD_WEBSITE//\//\\\/}"
+PROJECT_NEW_WEBSITE="${PROJECT_NEW_WEBSITE//\//\\\/}"
+
+project_sed_website() {
+    sed -i "s/${PROJECT_OLD_WEBSITE}/${PROJECT_NEW_WEBSITE}/g" "${1}"
+}
+
+#
 # VCS URL
 #
 
@@ -88,6 +105,7 @@ project_sed_vcs_url() {
 
 project_sed() {
     project_sed_id "${1}"
+    project_sed_website "${1}"
     project_sed_vcs_url "${1}"
     project_sed_description "${1}"
     project_sed_name "${1}"
