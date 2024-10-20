@@ -125,7 +125,7 @@ do
     done
 done
 # Left-over files
-for file in "Justfile" "meson.build" "README.md" "CONTRIBUTING.md"
+for file in "Justfile" "meson.build" "README.md" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md"
 do
     project_sed "${file}"
 done
@@ -137,7 +137,7 @@ rm --recursive --verbose --interactive=never .git
 git init
 
 # Update files
-for file in "data/${PROJECT_NEW_ID}.desktop.in.in" "data/${PROJECT_NEW_ID}.metainfo.xml.in.in" "src/application.c"
+for file in "data/${PROJECT_NEW_ID}.desktop.in.in" "data/${PROJECT_NEW_ID}.metainfo.xml.in.in" ".github/ISSUE_TEMPLATE/1-bug_report.yaml" ".github/ISSUE_TEMPLATE/2-feature_request.yaml"
 do
     vim "${file}"
 done
