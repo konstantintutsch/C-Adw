@@ -1,6 +1,6 @@
 # Code of Conduct
 
-Rules and consequences for behaviour within the project community.
+Rules and consequences for behavior within the project community.
 
 ## Goals
 
