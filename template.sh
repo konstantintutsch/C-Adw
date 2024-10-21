@@ -125,7 +125,7 @@ do
     done
 done
 # Left-over files
-for file in "Justfile" "meson.build" "README.md" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md"
+for file in "Justfile" "meson.build" "README.md" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md" "${PROJECT_NEW_ID}.Devel.yaml"
 do
     project_sed "${file}"
 done
