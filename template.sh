@@ -56,8 +56,12 @@ PROJECT_NEW_ID=""
 printf "Project ID [com.konstantintutsch.Template]: "
 read PROJECT_NEW_ID
 
+PROJECT_STR_OLD_ID="${PROJECT_OLD_ID//./-}"
+PROJECT_STR_NEW_ID="${PROJECT_NEW_ID//./-}"
+
 project_sed_id() {
     sed -i "s/${PROJECT_OLD_ID}/${PROJECT_NEW_ID}/g" "${1}"
+    sed -i "s/${PROJECT_STR_OLD_ID}/${PROJECT_STR_NEW_ID}/g" "${1}"
 }
 
 #
