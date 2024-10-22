@@ -27,4 +27,4 @@ jobs:
         flatpak install --user --assumeyes org.gnome.Sdk//47 org.gnome.Platform//47
 
     - name: Build development profile
-      run: sudo flatpak-builder --user --install --install-deps-from=flathub --force-clean _meson com.konstantintutsch.Template.Devel.yaml
+      run: flatpak-builder --user --install --install-deps-from=flathub --force-clean _meson com.konstantintutsch.Template.Devel.yaml
