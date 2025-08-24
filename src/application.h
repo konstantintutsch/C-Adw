@@ -5,8 +5,7 @@
 
 #define TEMPLATE_TYPE_APPLICATION (template_application_get_type())
 
-G_DECLARE_FINAL_TYPE(TemplateApplication, template_application, TEMPLATE,
-                     APPLICATION, AdwApplication);
+G_DECLARE_FINAL_TYPE(TemplateApplication, template_application, TEMPLATE, APPLICATION, AdwApplication);
 
 TemplateApplication *template_application_new(void);
 

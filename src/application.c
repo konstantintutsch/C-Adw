@@ -15,9 +15,7 @@ struct _TemplateApplication {
 
 G_DEFINE_TYPE(TemplateApplication, template_application, ADW_TYPE_APPLICATION);
 
-static void template_application_show_about(GSimpleAction * self,
-                                            GVariant * parameter,
-                                            TemplateApplication * app);
+static void template_application_show_about(GSimpleAction * self, GVariant * parameter, TemplateApplication * app);
 
 /**
  * This function initializes a TemplateApplication.
@@ -32,8 +30,7 @@ static void template_application_init(TemplateApplication *app)
 
     // Add actions
     g_autoptr(GSimpleAction) about_action = g_simple_action_new("about", NULL);
-    g_signal_connect(about_action, "activate",
-                     G_CALLBACK(template_application_show_about), app);
+    g_signal_connect(about_action, "activate", G_CALLBACK(template_application_show_about), app);
     g_action_map_add_action(G_ACTION_MAP(app), G_ACTION(about_action));
 }
 
@@ -58,8 +55,7 @@ static void template_application_activate(GApplication *app)
  * @param n_files https://docs.gtk.org/gio/signal.Application.open.html
  * @param hint https://docs.gtk.org/gio/signal.Application.open.html
  */
-static void template_application_open(GApplication *self, GFile **files,
-                                      int n_files, const char *hint)
+static void template_application_open(GApplication *self, GFile **files, int n_files, const char *hint)
 {
     GList *windows;
     TemplateWindow *window;
@@ -90,9 +86,7 @@ static void template_application_class_init(TemplateApplicationClass *class)
  */
 TemplateApplication *template_application_new()
 {
-    return g_object_new(TEMPLATE_TYPE_APPLICATION, "application-id", PROJECT_ID,
-                        G_APPLICATION_DEFAULT_FLAGS, G_APPLICATION_HANDLES_OPEN,
-                        NULL);
+    return g_object_new(TEMPLATE_TYPE_APPLICATION, "application-id", PROJECT_ID, G_APPLICATION_DEFAULT_FLAGS, G_APPLICATION_HANDLES_OPEN, NULL);
 }
 
 /**
@@ -102,40 +96,29 @@ TemplateApplication *template_application_new()
  * @param parameter https://docs.gtk.org/gio/signal.SimpleAction.activate.html
  * @param app https://docs.gtk.org/gio/signal.SimpleAction.activate.html
  */
-static void template_application_show_about(GSimpleAction *self,
-                                            GVariant *parameter,
-                                            TemplateApplication *app)
+static void template_application_show_about(GSimpleAction *self, GVariant *parameter, TemplateApplication *app)
 {
-    TemplateWindow *active_window =
-        TEMPLATE_WINDOW(gtk_application_get_active_window
-                        (GTK_APPLICATION(app)));
+    TemplateWindow *active_window = TEMPLATE_WINDOW(gtk_application_get_active_window(GTK_APPLICATION(app)));
 
-    AdwAboutDialog *about =
-        ADW_ABOUT_DIALOG(adw_about_dialog_new_from_appdata
-                         (ROOT_RESOURCE(_PROJECT_ID(".metainfo.xml")),
-                          PROJECT_VERSION));
+    AdwAboutDialog *about = ADW_ABOUT_DIALOG(adw_about_dialog_new_from_appdata(ROOT_RESOURCE(_PROJECT_ID(".metainfo.xml")),
+                                                                               PROJECT_VERSION));
 
     // Show version suffix
     adw_about_dialog_set_version(about, PROJECT_BUILD);
 
     // Details
-    adw_about_dialog_set_comments(about,
-                                  _("Create GUI apps in C using LibAdwaita"));
+    adw_about_dialog_set_comments(about, _("Create GUI apps in C using LibAdwaita"));
 
     // Credits
-    const char *developers[] =
-        { "Konstantin Tutsch <mail@konstantintutsch.com>", NULL };
+    const char *developers[] = { "Konstantin Tutsch <mail@konstantintutsch.com>", NULL };
     adw_about_dialog_set_developers(about, developers);
-    const char *designers[] =
-        { "GNOME Design Team https://welcome.gnome.org/team/design/",
+    const char *designers[] = { "GNOME Design Team https://welcome.gnome.org/team/design/",
         "Konstantin Tutsch <mail@konstantintutsch.com>", NULL
     };
     adw_about_dialog_set_designers(about, designers);
     adw_about_dialog_set_translator_credits(about, _("translator-credits"));
-    const char *libraries[] =
-        { "The GNOME Project https://www.gnome.org", NULL };
-    adw_about_dialog_add_acknowledgement_section(about, _("Dependencies"),
-                                                 libraries);
+    const char *libraries[] = { "The GNOME Project https://www.gnome.org", NULL };
+    adw_about_dialog_add_acknowledgement_section(about, _("Dependencies"), libraries);
 
     // Legal
     adw_about_dialog_set_copyright(about, "© 2024 Konstantin Tutsch");

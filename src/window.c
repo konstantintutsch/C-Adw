@@ -32,8 +32,7 @@ static void template_window_init(TemplateWindow *window)
  */
 static void template_window_class_init(TemplateWindowClass *class)
 {
-    gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class),
-                                                UI_RESOURCE("window.ui"));
+    gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class), UI_RESOURCE("window.ui"));
 }
 
 /**

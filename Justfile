@@ -48,9 +48,9 @@ setup:
         bear \
         libadwaita-devel
     flatpak install --user --assumeyes \
-        org.gnome.Platform//47 \
-        org.gnome.Sdk//47 \
-        org.gnome.Sdk.Debug//47 \
+        org.gnome.Platform//48 \
+        org.gnome.Sdk//48 \
+        org.gnome.Sdk.Debug//48 \
         org.flatpak.Builder
 
     meson setup _meson
