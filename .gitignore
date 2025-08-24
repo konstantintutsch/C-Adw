@@ -3,3 +3,5 @@
 /subprojects/blueprint-compiler
 /.flatpak-builder
 /_*
+/compile_commands.json
+/.cache
