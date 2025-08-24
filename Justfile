@@ -30,9 +30,16 @@ debug:
         com.konstantintutsch.Template.Devel
 
 setup:
-    sudo dnf install -y indent
-    sudo dnf install -y meson
-    sudo dnf install -y libadwaita-devel
-    flatpak install --user --assumeyes org.gnome.Platform//47
-    flatpak install --user --assumeyes org.gnome.Sdk//47
-    flatpak install --user --assumeyes org.flatpak.Builder
+    sudo dnf install --assumeyes \
+        indent \
+        meson \
+        bear \
+        libadwaita-devel
+    flatpak install --user --assumeyes \
+        org.gnome.Platform//47 \
+        org.gnome.Sdk//47 \
+        org.gnome.Sdk.Debug//47 \
+        org.flatpak.Builder
+
+    meson setup _meson
+    bear -- meson compile -C _meson
